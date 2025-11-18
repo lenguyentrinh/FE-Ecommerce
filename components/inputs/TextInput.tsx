@@ -1,0 +1,38 @@
+"use client";
+import { Path, UseFormRegister, FieldValues } from "react-hook-form";
+
+type textInputProps<TFormValues extends FieldValues> = {
+  label?: string;
+  placehoder?: string;
+  type?: string;
+  name: Path<TFormValues>;
+  register: UseFormRegister<TFormValues>;
+  required?: string;
+  error?: string;
+};
+export default function TextInput<TFormValues extends FieldValues>({
+  label,
+  placehoder,
+  type = "text",
+  name,
+  register,
+  required,
+  error,
+}: textInputProps<TFormValues>) {
+  return (
+    <div className="mb-3">
+      {label && (
+        <label className="mb-1 block text-sm font-medium text-gray-700">
+          {label}
+        </label>
+      )}
+      <input
+        className="w-full rounded-lg p-2 border border-gray-300 shadow-md focus:outline-none"
+        type={type}
+        placeholder={placehoder}
+        {...register(name, { required })}
+      />
+      {error && <p className="text-red-500 text-sm">{error}</p>}
+    </div>
+  );
+}

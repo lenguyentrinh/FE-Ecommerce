@@ -26,7 +26,7 @@ export default function LoginPage() {
           </div>
         </div>
         <div className="flex text-center justify-center text-gray-500 hover:text-gray-700 pt-4">Don't have an account? 
-            <a href="#" className="underline">Sign up</a>
+            <a href="/signup" className="underline">Sign up</a>
         </div>
       </div>
     </div>
