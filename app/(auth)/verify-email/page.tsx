@@ -1,0 +1,12 @@
+import VerifyEmailForm from "./VerifyEmailForm";
+
+export default function VerifyEmailPage() {
+  return (
+    <div className="bg-login flex min-h-screen items-center justify-center">
+      <div className="bg-white p-8 rounded shadow-md w-full md:w-2/7 ">
+        <h1 className="font-semibold text-center mb-3">Verify your email</h1>
+        <VerifyEmailForm />
+      </div>
+    </div>
+  );
+}

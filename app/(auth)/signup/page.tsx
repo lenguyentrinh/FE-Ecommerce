@@ -5,7 +5,7 @@ export default function SignupPage() {
     <div className="bg-login flex min-h-screen items-center justify-center">
       <div className="bg-white p-8 rounded shadow-md w-full md:w-2/7 ">
         <h1 className="font-semibold text-4xl text-center mb-3">Wellcome</h1>
-        <SignupForm />
+        <SignupForm/>
         <div className="flex text-center justify-center text-gray-500 hover:text-gray-700 pt-4">Have your an account? 
             <a href="/login" className="underline">Login</a>
         </div>
